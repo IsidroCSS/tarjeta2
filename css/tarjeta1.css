@@ -1,0 +1,67 @@
+.tarjeta {
+	width: 350px;
+	height: 350px;
+	position: relative;
+	margin-top: 2rem;
+	border-radius: 7px;
+	box-shadow: 0 0 10px black;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.tarjeta .tarjeta-imagen {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/ana-balseca.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.tarjeta .tarjeta-contenido {
+	padding: 20px;
+	background-color: rgba(0, 0, 0, .6);
+	color: #fff;
+	width: 90%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;*/
+	text-align: center;
+	border-radius: 7px;
+	transform: translateY(100%);
+	transition: 400ms ease;
+}
+
+.tarjeta .tarjeta-contenido .tarjeta-descripcion {
+	line-height: 40px;
+	position: absolute;
+	bottom: 25%;
+	font-size: 1.1em;
+}
+
+.tarjeta .tarjeta-contenido .tarjeta-descripcion .correo a {
+	font-size: 0.8em;
+	color: #fff;
+}
+
+.tarjeta .tarjeta-contenido .tarjeta-boton {
+	color: #000;
+	background-color: #fff;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 7px;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	outline: 3px solid #fff;
+	outline-offset: 4px;
+}
+
+.tarjeta .tarjeta-imagen:hover + .tarjeta-contenido, .tarjeta-contenido:hover {
+	transform: translateY(0);
+}
